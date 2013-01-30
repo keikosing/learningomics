@@ -1,0 +1,9 @@
+dietcolors <- unlist(lapply(f3[1,], color.map))
+
+png(filename="c:/moni_files/Dropbox/Lamendella/analysis/heatmap-family.jpg", width=1200, height=800)
+
+f_heatmap<-heatmap.2(f4,Rowv=TRUE, Colv=FALSE, scale="column", trace="none", 
+  col=redgreen(75), xlab="diet type", ylab="family", ColSideColors=dietcolors, margins=c(5,15),)	  
+dev.off()
+	
+##### heatmap for phylum analysis
